@@ -2,13 +2,24 @@
 
 /** @var \Magento\Framework\View\Element\Template $block */
 ?>
-<script type="text/x-magento-init">
+<!--<script type="text/x-magento-init">
   {
     "#target": {
       "coffee": {
-        "base_url": "<?= $block->escapeJs($block->getBaseUrl())?>"}
+        "base_url": "<?/*= $block->escapeJs($block->getBaseUrl())*/?>"}
     }
   }
+</script>-->
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "startSimple":
+                }
+            }
+        }
+    }
 </script>
 <!--<div id="target" data-mage-init='{ "Mage2tv_Js/js/requirejs-example": {"base_url": "/"}}'/>-->
 <pre id="target"></pre>
